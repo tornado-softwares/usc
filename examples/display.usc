@@ -1,0 +1,3 @@
+external function display(value: number or string or boolean): void;
+
+display(1);

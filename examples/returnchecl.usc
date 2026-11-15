@@ -1,0 +1,18 @@
+{a:string;b:number;} top(){
+	function in():number {
+		if(1 == 1){
+			return 1;
+		} else {
+			return 1;
+		}
+	}
+	if(1 == 1){
+		return {a:"", b:in()};
+	}
+	return {a:"", b:in()};
+}
+
+
+let a:number = 4;
+a = a + a;
+a = 2*a;

@@ -1,0 +1,117 @@
+
+type poopi = number;
+
+poopi main(){
+	return 0;
+}
+
+external display(arg:number or string):void ;
+
+type user = {
+	id: number;
+	name: string;
+	active: boolean;
+};
+
+type poop = number;
+
+type product = {
+	id: number;
+	name: string;
+	price: number;
+};
+
+type order = {
+	id: number;
+	customer: user;
+	product: product;
+	quantity: number;
+};
+
+type order_summary = {
+	customer_name: string;
+	product_name: string;
+	total: number;
+	successful: boolean;
+};
+
+const c:number = 23333333333333333333333333333333333333333333333444444444444444444444444444444442222222222222222222222222222222444444444444444;
+
+function is_user_active(user: user): boolean {
+	return user.active;
+}
+
+function multiply(a: number, b: number): number {
+	return c;
+}
+
+function calculate_total(price: number, quantity: number): number {
+	const total: number = multiply(price, quantity);
+	return total;
+}
+
+function create_order_summary(order: order): order_summary {
+	const total: number = calculate_total(
+		order.product.price,
+		order.quantity
+	);
+
+	const summary: order_summary = {
+		customer_name: order.customer.name,
+		product_name: order.product.name,
+		total: total,
+		successful: true
+	};
+
+	return summary;
+}
+
+function print_order(summary: order_summary): void {
+	const customer: string = summary.customer_name;
+	const product: string = summary.product_name;
+	const amount: number = summary.total;
+
+	display(customer);
+	display(product);
+	display(amount);
+
+	return;
+}
+
+function process_order(user: user, product: product, quantity:number): order_summary {
+
+
+
+	const active: boolean = is_user_active(user);
+
+	const order: order = {
+		id: 100,
+		customer: user,
+		product: product,
+		quantity: quantity
+	};
+
+	const summary: order_summary = create_order_summary(order);
+
+	print_order(summary);
+
+	return summary;
+}
+
+const user: user = {
+	id: 1,
+	name: "Alice",
+	active: true
+};
+
+const product: product = {
+	id: 10,
+	name: "Laptop",
+	price: 1200
+};
+
+const result: order_summary = process_order(user, product, 34);
+
+display(result.customer_name);
+display(result.product_name);
+display(result.total);

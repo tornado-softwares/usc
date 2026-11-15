@@ -1,0 +1,65 @@
+external void display(value: number or string or boolean);
+external void display_string(value: string) ;
+external void display_number(value: number) ;
+external void display_boolean(value: boolean);
+
+type circle = {
+	kind: "circle";
+	r: number;
+};
+
+type rect = {
+	kind: "rect";
+	w: number;
+	h: number;
+};
+
+type shape = circle or rect ;
+type air = {
+	kind : "circle" or "rect";
+	surface:number;
+};
+
+function area(shape: shape): air {
+	if (shape.kind == "circle") {
+		const aire:number = 3 * shape.r * shape.r;
+		return { kind: shape.kind, surface:aire };
+	} else {
+		const aire:number = shape.w * shape.h;
+		return { kind: shape.kind, surface:aire };
+	}
+}
+
+air areaa(shape: shape) {
+	if (shape.kind == "circle") {
+		const aire:number = 3 * shape.r * shape.r;
+		return { kind: shape.kind, surface:aire };
+	} else {
+		const aire:number = shape.w * shape.h;
+		return { kind: shape.kind, surface:aire };
+	}
+}
+
+number main(){
+	return 0;
+}
+
+main_1(): number {
+	return 0;
+}
+
+function main_2(): number {
+	return 0;
+}
+
+(air) const a = area({
+	kind: "circle",
+	r: 3
+});
+
+display(a.kind);
+display(a.surface);
+
+main();
+
+type haha = string or air;

@@ -1,0 +1,2 @@
+["(" ")" "{" "}"] @punctuation.bracket
+[":" ";" "," "."] @punctuation.delimiter

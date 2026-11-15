@@ -1,0 +1,3 @@
+type poop = number;
+
+const a:poop = 1;

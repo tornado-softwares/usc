@@ -1,0 +1,47 @@
+external void display(value:number or string);
+
+type test = {kind:"A"; value_a:number;} or {kind:"B"; value_b:number;};
+const a:test = {kind:"A", value_a:3};
+
+if (a.kind == "A" or a.kind == "B"){
+	a;
+}
+
+if (a.kind == "A" and a.kind == "B"){
+	a;
+}
+
+if (a.kind == "A" ){
+	a.value_a;
+} else {
+	a.value_b;
+}
+
+
+if (a.kind != "A"){
+	a.value_b;
+} else {
+	a.value_a;
+}
+
+if (a.kind == "A" and a.value_a == 3){
+	a.value_a;
+} else {
+	a;
+}
+
+if (a.kind == "B" and a.value_b == 3){
+	a;
+}
+
+if ( true or (a.kind == "A" and a.value_a == 3)){
+	a;
+}
+
+if (a.kind == "A" and 1>1){
+}
+
+
+if (a.kind == "A" or 1>1){
+	a;
+}

@@ -1,0 +1,46 @@
+type thing = {a:string;b:string;};
+let a:thing = {a:"Hey", b:"Boo"};
+const b:{a:string;b:string;} = {a:"Poop", b:"Yeee"};
+
+if (a == b){
+
+}
+
+if (a == {a:"Poop", b:""} satisfies {a:string; b:string;}){
+
+}
+
+const g:string or number = "";
+
+{a:"", b:""} satisfies ({a:string; b:string;} or {poop:string;});
+
+{a:""} satisfies ({a:string;} or {a:number;});
+{a:1} satisfies ({a:string;} or {a:number;});
+
+{a:""} satisfies {a:number or string;};
+{a:""} satisfies {a:number or string;};
+
+{a:""} satisfies {a:string;} or {a:number;};
+{a:1} satisfies {a:string;} or {a:number;};
+
+
+type fuckyou_success = {max:number; min:number; success: true;};
+type fuckyou_error = {message:string;  success:false;};
+type fuckyou_output = fuckyou_success or fuckyou_error;
+
+function fuckyou():fuckyou_output {
+	const max:number = 1;
+	const min:number = 1;
+	if(true){
+		return {message:"Erreur inconnnue blabla", success:false};
+	}
+	return {max:max, min:min, success:true};
+}
+
+const shit:fuckyou_output = fuckyou();
+
+if (shit.success == true){
+	const output:fuckyou_success = shit;
+} else {
+	const output:fuckyou_error = shit;
+}

@@ -1,0 +1,135 @@
+function fibonacci(n: number): number {
+	if (n < 2) {
+		return n;
+	}
+	return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+function gcd(a: number, b: number): number  {
+	if (b == 0) {
+		return a;
+	}
+	return gcd(b, a % b);
+}
+
+function has_divisor(n: number, d: number): boolean {
+	if (d * d > n) {
+		return false;
+	}
+	if (n % d == 0) {
+		return true;
+	}
+	return has_divisor(n, d + 1);
+}
+
+function is_prime(n: number): boolean {
+	if (n < 2) {
+		return false;
+	}
+	return has_divisor(n, 2) == false;
+}
+
+function is_leap_year(year: number): boolean {
+	return (year % 4 == 0 and year % 100 != 0) or year % 400 == 0;
+}
+
+type direction = "north" or "south" or "east" or "west";
+
+function describe(d: direction): string {
+	if (d == "north") {
+		return "vers le haut";
+	}
+	if (d == "south") {
+		return "vers le bas";
+	}
+	if (d == "east") {
+		return "vers la droite";
+	}
+	return "vers la gauche";
+}
+
+
+type address = {
+	city: string;
+	zip: number;
+};
+
+type person = {
+	name: string;
+	age: number;
+	home: address;
+};
+
+const alice: person = {
+	name: "alice",
+	age: 30,
+	home: { city: "bordeaux", zip: 33000 } satisfies address
+};
+
+(alice.name);
+(alice.home.city);
+(alice.home.zip);
+
+
+function collatz_steps(n: number, steps: number): number {
+	if (n == 1) {
+		return steps;
+	}
+	if (n % 2 == 0) {
+		return collatz_steps(n / 2, steps + 1);
+	}
+	return collatz_steps(3 * n + 1, steps + 1);
+}
+
+
+function digit_sum(n: number): number {
+	if (n < 10) {
+		return n;
+	}
+	return n % 10 + digit_sum(n / 10);
+}
+
+
+function max(a: number, b: number): number {
+	if (a > b) {
+		return a;
+	}
+	return b;
+}
+
+function min(a: number, b: number): number {
+	if (a < b) {
+		return a;
+	}
+	return b;
+}
+
+function clamp(value: number, low: number, high: number): number {
+	return min(max(value, low), high);
+}
+
+function power(base: number, exponent: number): number {
+	if (exponent == 0) {
+		return 1;
+	}
+	return base * power(base, exponent - 1);
+}
+
+function celsius_to_fahrenheit(c: number): number {
+	return c * 9 / 5 + 32;
+}
+
+type result = {
+	sum: number;
+	product: number;
+};
+
+function combine(a: number, b: number): result {
+	return { sum: a + b, product: a * b } satisfies result;
+}
+
+
+function main():number {
+
+	return 0;
+}

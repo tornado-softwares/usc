@@ -1,0 +1,27 @@
+type article = {
+	titre        :	string;
+	description  :	string;
+};
+
+const article_inner_type:{
+	title:			string;
+	description:	string;
+} = {
+	title : "Hello",
+	description : "Hello World"
+};
+
+function poop(): string{
+	let poop:string = "Yeah";
+	let article_rewrite_type: article = {
+		titre : poop,
+		description : "Hello World"
+	};
+	article_rewrite_type.titre = "New World";
+	return article_rewrite_type.titre;
+}
+
+
+
+function aaaa(): article{
+}

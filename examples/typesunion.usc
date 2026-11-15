@@ -1,0 +1,17 @@
+type test = number or string;
+type aaaa = boolean or test;
+
+type xccc = {kind:"A"; value:number;} or {kind:"B";value:number;};
+
+const poop:test = "Hello\nWorld";
+
+const aaaa:test = 1;
+const fffff:test or boolean = false;
+const utyf:aaaa = 1;
+
+
+
+void test(){
+
+	return;
+}

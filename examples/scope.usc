@@ -1,0 +1,32 @@
+function display(arg:number):void{}
+
+function poop_0():void {
+	const x:number = 0;
+	display(x);
+	function poop_1():void {
+		const x:number = 1;
+		display(x);
+		function poop_2():void {
+			const x:number = 2;
+			display(x);
+		}
+		poop_2();
+	}
+	poop_1();
+
+	type tree_child = {
+		next:tree_head;
+	};
+
+	type tree_head =  {
+		poop:string;
+	};
+
+	const a:tree_child = {
+		next:{
+			poop:"Shut the fuck up"
+		}
+	};
+
+}
+poop_0();

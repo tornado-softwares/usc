@@ -1,0 +1,11 @@
+
+
+const a:number = 1;
+const function:number = 1;
+
+function abc(p:string):string {
+	const a:string = p;
+	return a;
+}
+
+const b:number = function;

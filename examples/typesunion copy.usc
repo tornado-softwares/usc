@@ -1,0 +1,5 @@
+type test = number or string;
+
+const poop:test = "";
+const aaaa:test = 1;
+const fffff:test  = false;

@@ -1,0 +1,20 @@
+[
+	{
+		"token_type": "punctuation",
+		"style": [
+			"punctuation.bracket",
+			"punctuation"
+		]
+	},
+	{
+		"token_type": "parameter",
+		"style": [
+			"variable"
+		]
+	},
+	{
+		"token_type": "boolean",
+		"foreground_color": "#27c844",
+		"font_style": "italic"
+	}
+]

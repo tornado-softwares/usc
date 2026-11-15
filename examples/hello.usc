@@ -1,0 +1,9 @@
+function fuck():void{
+	let fuck_you:string = "";
+	return;
+}
+
+const fuck_you:number  = 3;
+
+
+type poop = number;

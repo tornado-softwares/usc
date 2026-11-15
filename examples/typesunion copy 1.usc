@@ -1,0 +1,1 @@
+external display(variable: number or string or boolean): void;

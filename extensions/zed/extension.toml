@@ -1,0 +1,11 @@
+id = "usc"
+name = "usc"
+version = "0.0.1"
+schema_version = 1
+authors = ["Tornado Softwares"]
+description = "USC extension for zed."
+
+[language_servers.usc]
+semantic_tokens = "combined"
+name = "usc"
+languages = ["usc"]

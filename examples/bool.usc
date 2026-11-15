@@ -1,0 +1,5 @@
+const poop:boolean = true;
+
+type poop = {
+	a: true;
+};
